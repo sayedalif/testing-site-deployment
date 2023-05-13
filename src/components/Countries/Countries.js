@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Country from '../Country/Country';
 import './Countries.css';
+import Header from '../Header/Header';
 
 const Countries = () => {
   let [countries, setCountries] = useState([]);
@@ -13,6 +14,10 @@ const Countries = () => {
   return (
     <div>
       <h1 className='heading'>rest countries: {countries.length}</h1>
+      
+      {/* header */}
+      <Header></Header>
+
       <div className='countries-container'>
         {
           countries.map(country => <Country country={country} key={country.ccn3}></Country>)
